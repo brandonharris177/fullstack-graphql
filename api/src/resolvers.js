@@ -12,8 +12,11 @@ module.exports = {
     //     }
     // },
 
-    pets(_, __, {models, db}) {
-      return models.Pet.findMany()
+    pets(_, {input}, {models, db}) {
+      return models.Pet.findMany(input)
+    },
+    pet(_, {input}, {models, db}) {
+      return models.Pet.findOne(input)
     }
   },
   // Mutation: {

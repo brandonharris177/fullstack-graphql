@@ -8,8 +8,19 @@ const typeDefs = gql`
         friends: [User!]!
     }
 
+    type Shoe {
+        brand: String!
+        size: Int!
+    }
+
+    input ShoeInput {
+        brand: String
+        size: Int
+    }
+
     type Query {
         me: User!
+        shoes(input: ShoeInput): [Shoe]!
     }
 `
 
@@ -21,6 +32,15 @@ const resolvers = {
                 avatar: 'http://yoda.png',
                 friends: []
             }
+        },
+
+        shoes(_, {input}) {
+            return [
+                {brand: 'nike', size: 12},
+                {brand: 'adiddas', size: 13}
+            ].filter(shoe => {
+                return shoe.brand === input.brand
+            })
         }
     }
 }
