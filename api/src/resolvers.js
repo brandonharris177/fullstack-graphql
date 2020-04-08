@@ -5,7 +5,21 @@
 
 module.exports = {
   Query: {
-    
+      user(_, _, {models}) {
+        return {
+          id: 'this id',
+          username: 'this username'
+        }
+    },
+
+    pet(_, _, {models}) {
+      return {
+        id: "pet id",
+        CreatedAt: 4,
+        name: "pet name",
+        type: "pet type",
+      }
+    }
   },
   Mutation: {
     
