@@ -7,7 +7,7 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   context() {
-    return {models}
+    return {models, db}
   }
 })
 

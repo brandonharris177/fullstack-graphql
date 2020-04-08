@@ -5,33 +5,28 @@
 
 module.exports = {
   Query: {
-      user(_, _, {models}) {
-        return {
-          id: 'this id',
-          username: 'this username'
-        }
-    },
+    //   user(_, _, {models, db}) {
+    //     return {
+    //       id: 'this id',
+    //       username: 'this username'
+    //     }
+    // },
 
-    pet(_, _, {models}) {
-      return {
-        id: "pet id",
-        CreatedAt: 4,
-        name: "pet name",
-        type: "pet type",
-      }
+    pets(_, __, {models, db}) {
+      return models.Pet.findMany()
     }
   },
-  Mutation: {
+  // Mutation: {
     
-  },
-  Pet: {
-    img(pet) {
-      return pet.type === 'DOG'
-        ? 'https://placedog.net/300/300'
-        : 'http://placekitten.com/300/300'
-    }
-  },
-  User: {
+  // },
+  // Pet: {
+  //   img(pet) {
+  //     return pet.type === 'DOG'
+  //       ? 'https://placedog.net/300/300'
+  //       : 'http://placekitten.com/300/300'
+  //   }
+  // },
+  // User: {
     
-  }
+  // }
 }
