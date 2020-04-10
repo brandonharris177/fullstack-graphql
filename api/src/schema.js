@@ -11,7 +11,7 @@ const typeDefs = gql`
 
     type Pet {
       id: ID!
-      CreatedAt: String!
+      createdAt: String!
       name: String!
       type: String!
     }
@@ -21,10 +21,28 @@ const typeDefs = gql`
         type: String
     }
 
+    input UserInput {
+      username: String
+    }
+
     type Query {
-        users: [User]
+        users(input: UserInput): [User]!
         pets(input: PetInput): [Pet]!
         pet(input: PetInput): Pet
+    }
+
+    input NewPetInput {
+        name: String!
+        type: String!
+    }
+
+    input NewUserInput {
+        username: String!
+    }
+
+    type Mutation {
+      newPet(input: NewPetInput!): Pet!
+      newUser(input: NewUserInput!): User!
     }
 `;
 

@@ -5,23 +5,28 @@
 
 module.exports = {
   Query: {
-    //   user(_, _, {models, db}) {
-    //     return {
-    //       id: 'this id',
-    //       username: 'this username'
-    //     }
-    // },
-
-    pets(_, {input}, {models, db}) {
+  pets(_, {input}, {models, db}) {
       return models.Pet.findMany(input)
     },
+
     pet(_, {input}, {models, db}) {
       return models.Pet.findOne(input)
+    },
+
+    users(_, {input}, {models, db}) {
+      console.log(input)
+      return models.User.findMany(input)
     }
   },
-  // Mutation: {
-    
-  // },
+  Mutation: {
+    newPet(_, {input}, {models, db}) {
+      return models.Pet.create(input)
+    },
+
+    newUser(_, {input}, {models, db}) {
+      return models.User.create(input)
+    }
+  },
   // Pet: {
   //   img(pet) {
   //     return pet.type === 'DOG'

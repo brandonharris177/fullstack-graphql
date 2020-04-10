@@ -1,7 +1,8 @@
 {
   "user": {
-    "id": "jBWMVGjm50l6LGwepDoty",
-    "username": "frontendmaster"
+    "id": "NtN60-xpAnn2h-8ToRXVg",
+    "createdAt": 1586446912801,
+    "username": "Animar"
   },
   "pet": [
     {
@@ -15,6 +16,42 @@
       "createdAt": "11",
       "name": "Meren",
       "type": "dragon"
+    },
+    {
+      "id": "b5tWLOiAxZc71OXdxAh62",
+      "createdAt": 1586382433077,
+      "name": "Animar",
+      "type": "elemental"
+    },
+    {
+      "id": "GDFQCQPvLtBXjGKfdPrcB",
+      "createdAt": 1586382439195,
+      "name": "Animar",
+      "type": "elemental"
+    },
+    {
+      "id": "3VPQcbkwFMtCJ8z6pLskq",
+      "createdAt": 1586382452424,
+      "name": "Animar",
+      "type": "elemental"
+    },
+    {
+      "id": "dHvYjj4N9pBSD_MQV4TkY",
+      "createdAt": 1586382473693,
+      "name": "Animar",
+      "type": "elemental"
+    },
+    {
+      "id": "LfqUKIkq2VY880QrgYvxV",
+      "createdAt": 1586382479036,
+      "name": "Animar",
+      "type": "elemental"
+    },
+    {
+      "id": "ffraeKKwT3wDeaEVD_AZ1",
+      "createdAt": 1586382515818,
+      "name": "Animar",
+      "type": "elemental"
     }
   ]
 }

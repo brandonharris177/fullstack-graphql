@@ -13,7 +13,15 @@ const createUserModel = db => {
         .write()
   
       return newUser
+    },
+  
+    findMany(filter) {
+      return db.get('user')
+        .filter(filter)
+        .value()
     }
+  
+  
   }
 }
 
